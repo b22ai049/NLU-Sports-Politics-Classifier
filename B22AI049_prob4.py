@@ -19,7 +19,7 @@ def download_data():
         response.raise_for_status()
         df = pd.read_csv(io.StringIO(response.text))
         
-        # Determine the correct column names automatically
+        # Determine the correct column names 
         label_col = 'label' if 'label' in df.columns else ('category' if 'category' in df.columns else None)
         text_col = 'text' if 'text' in df.columns else ('content' if 'content' in df.columns else None)
 

@@ -13,7 +13,7 @@ def get_stats(vocab):
 def merge_vocab(pair, v_in):
     v_out = {}
     bigram = re.escape(' '.join(pair))
-    # Ensures we merge only exact whitespace-separated pairs
+    # Ensures that we merge only the  exact whitespace separated pairs to it
     p = re.compile(r'(?<!\S)' + bigram + r'(?!\S)')
     replacement = ''.join(pair)
     for word in v_in:
@@ -32,7 +32,7 @@ def main():
     with open(corpus_path, 'r', encoding='utf-8') as f:
         words = f.read().split()
 
-    # Initial vocab: characters separated by spaces with end-of-word marker
+    # Initial vocabulary characters separated by spaces with endofword marker
     vocab = Counter([' '.join(list(word)) + ' </w>' for word in words])
 
     for i in range(k):

@@ -39,7 +39,7 @@ class NaiveBayes:
         neg_words_sum = sum(self.neg_word_counts.values())
 
         for token in tokens:
-            # Laplace smoothing: (count + 1) / (total_words + vocab_size)
+            # Laplace smoothing:(count+1)/(totalwords+vocabsize)
             pos_score += math.log((self.pos_word_counts[token] + 1) / (pos_words_sum + v_size))
             neg_score += math.log((self.neg_word_counts[token] + 1) / (neg_words_sum + v_size))
             
@@ -48,7 +48,7 @@ class NaiveBayes:
 from collections import Counter
 if __name__ == "__main__":
     nb = NaiveBayes()
-    nb.train('pos.txt', 'neg.txt') # Ensure these files are in the directory
+    nb.train('pos.txt', 'neg.txt') # Ensure these files are in the directory only for safety
     
     print("Naive Bayes Classifier Trained.")
     while True:

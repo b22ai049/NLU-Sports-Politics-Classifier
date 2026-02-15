@@ -2,12 +2,12 @@ import re
 from datetime import date
 import logging
 
-# Setup logging to generate B15CS001_prob1.log automatically
+# Setup logging to generate logging thing automatically
 logging.basicConfig(
     filename='B22AI049_prob1.log',
     level=logging.INFO,
     format='%(message)s',
-    filemode='a' # Appends each run to the log
+    filemode='a' # Appends after each run to the log
 )
 
 def log_interaction(user_input, bot_response):
