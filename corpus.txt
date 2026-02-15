@@ -1,0 +1,11 @@
+the cat is on the mat
+the dog is in the house
+the cat and the dog are friends
+this is a simple test for bpe
+tokenization helps in nlu
+learning is a great experience
+the quick brown fox jumps over the lazy dog
+nlu stands for natural language understanding
+natural language processing is interesting
+the cat likes the dog
+a dog is a loyal friend
